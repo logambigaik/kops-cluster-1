@@ -37,7 +37,7 @@ This keypair is used for ssh into kubernetes cluster
 
 	ssh-keygen
 # 8. Create a Kubernetes cluster definition
-	kops create cluster --zones=us-east-1a,us-east-1b,us-east-1c --name=cloudtechmasters.ml
+	kops create cluster --zones=us-east-1a,us-east-1b,us-east-1c --name=cloudtechmasters.ml --state s3://cloudtechmasters.ml.k8s
 # 9. Create kubernetes cluster
 	kops update cluster --name cloudtechmasters.ml --yes
 Above command may take some time to create the required infrastructure resources on AWS. Execute the validate command to check its status and wait until the cluster becomes ready
