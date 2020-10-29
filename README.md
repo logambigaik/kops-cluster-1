@@ -47,5 +47,13 @@ For the above above command, you might see validation failed error initially whe
 
 # 10. Check nodes of the cluster
 	kubectl get nodes
+# 11. Connect to the KOPS Cluster
+	ssh -i ~/.ssh/id_rsa ubuntu@api.cloudtechmasters.ml
+  ![image](https://user-images.githubusercontent.com/58024415/97555980-d623f380-19fe-11eb-95ee-9346a1835306.png)
+# Deploy application
+	kubectl apply -f deployment.yml
+	kubectl apply -f service.yml
+# Goto UI and check output
+  ![image](https://user-images.githubusercontent.com/58024415/97556253-3a46b780-19ff-11eb-8339-6eb2ddc5c235.png)
 # Clean-UP
-	kops delete cluster --name=cloudtechmasters.ml --yes
+	kops delete cluster --name=cloudtechmasters.ml --state s3://cloudtechmasters.ml.k8s --yes
