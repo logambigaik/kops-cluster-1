@@ -12,6 +12,7 @@
 	curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
 	chmod +x kops-linux-amd64
 	sudo mv kops-linux-amd64 /usr/bin/kops
+	kops version
 # 4. Install kubectl
 	curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl
 	chmod +x ./kubectl
