@@ -39,12 +39,12 @@ This keypair is used for ssh into kubernetes cluster
 
 	ssh-keygen
 # 8. Create a Kubernetes cluster definition
-	kops create cluster --zones=us-east-1a,us-east-1b,us-east-1c --name=cloudtechmasters.ml --state s3://cloudtechmasters.ml.k8s
+	kops create cluster --zones=us-east-1a,us-east-1b,us-east-1c --name=cloudtechmasters.ml --state s3://cloudtechmasters.ml
 # 9. Create kubernetes cluster
-	kops update cluster --name cloudtechmasters.ml --state s3://cloudtechmasters.ml.k8s --yes
+	kops update cluster --name cloudtechmasters.ml --state s3://cloudtechmasters.ml --yes
 Above command may take some time to create the required infrastructure resources on AWS. Execute the validate command to check its status and wait until the cluster becomes ready
 
-	kops validate cluster --state s3://cloudtechmasters.ml.k8s --wait 10m
+	kops validate cluster --state s3://cloudtechmasters.ml --wait 10m
 For the above above command, you might see validation failed error initially when you create cluster and it is expected behaviour, you have to wait for some more time and check again.
 
 # 10. Check nodes of the cluster
@@ -58,4 +58,4 @@ For the above above command, you might see validation failed error initially whe
 # Goto UI and check output
   ![image](https://user-images.githubusercontent.com/58024415/97556253-3a46b780-19ff-11eb-8339-6eb2ddc5c235.png)
 # Clean-UP
-	kops delete cluster --name=cloudtechmasters.ml --state s3://cloudtechmasters.ml.k8s --yes
+	kops delete cluster --name=cloudtechmasters.ml --state s3://cloudtechmasters.ml --yes
