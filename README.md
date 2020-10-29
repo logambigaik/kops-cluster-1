@@ -30,8 +30,10 @@ S3 bucket is used by kubernetes to persist cluster state, lets create s3 bucket 
 	Head over to aws Route53 and create hostedzone
 	Choose name for example (cloudtechmasters.ml)
 	Hit create
+  ![image](https://user-images.githubusercontent.com/58024415/97588093-2791aa00-1a22-11eb-9263-b1321ee21260.png)
 # Note:
-  Add NS records for the domain where you register the domain 
+  Add NS records for the domain where you register the domain
+  ![image](https://user-images.githubusercontent.com/58024415/97588017-0fba2600-1a22-11eb-9cc6-b4707e9a51ef.png)
 # 7. Create ssh key pair
 This keypair is used for ssh into kubernetes cluster
 
