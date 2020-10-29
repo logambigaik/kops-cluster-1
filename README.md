@@ -25,7 +25,7 @@
 # 5. Create S3 bucket in AWS
 S3 bucket is used by kubernetes to persist cluster state, lets create s3 bucket using aws cli Note: Make sure you choose bucket name that is uniqe accross all aws accounts
 
-	aws s3 mb s3://cloudtechmasters.ml.k8s --region us-east-1
+	aws s3 mb s3://cloudtechmasters.ml --region us-east-1
 # 6. Create hosted zone in AWS Route53
 	Head over to aws Route53 and create hostedzone
 	Choose name for example (cloudtechmasters.ml)
