@@ -42,7 +42,7 @@ This keypair is used for ssh into kubernetes cluster
 	kops update cluster --name cloudtechmasters.ml --state s3://cloudtechmasters.ml.k8s --yes
 Above command may take some time to create the required infrastructure resources on AWS. Execute the validate command to check its status and wait until the cluster becomes ready
 
-	kops validate cluster
+	kops validate cluster --state s3://cloudtechmasters.ml.k8s --wait 10m
 For the above above command, you might see validation failed error initially when you create cluster and it is expected behaviour, you have to wait for some more time and check again.
 
 # 10. Check nodes of the cluster
